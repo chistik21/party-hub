@@ -1,0 +1,30 @@
+{
+  "name": "party-hub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run check && vite build web --outDir ../release/site --emptyOutDir && node scripts/bundle.mjs",
+    "start": "node release/server.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "check": "tsc --noEmit",
+    "dev": "node release/server.cjs"
+  },
+  "dependencies": {
+    "ws": "8.21.3",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "qrcode": "1.5.4"
+  },
+  "devDependencies": {
+    "vite": "6.3.5",
+    "esbuild": "0.25.10",
+    "typescript": "5.8.3",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "19.1.9",
+    "@types/qrcode": "1.5.5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
